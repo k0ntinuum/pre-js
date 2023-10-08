@@ -13,5 +13,21 @@ export function random_words(n, a, m, M) {
         w.push( random_word(a, m, M));
     return w;
 }
+export function nth_word(a,n) {
+    let y = '';
+    const s = n.toString(a.length);
+    for (let i = 0 ; i < s.length; i++) {
+        y += a[parseInt(s[i],a.length )]
+
+    }
+    return y
+}
+
+export function first_n_words(a,n) {
+    let w = [];
+    for (let i = 0 ; i < n ; w.push(nth_word(a, i++)));
+    return w;
+}
+
 
 

@@ -12,3 +12,9 @@ export function cls() {
 export function set_rgb(r,g,b) {
     print(`\x1b[38;2;${r};${g};${b}m`)
 }
+export function hide_cursor() {
+    print(`\x1b[?25l`);
+}
+export function show_cursor() {
+    print(`\x1b[?25h`);
+}
