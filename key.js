@@ -25,3 +25,21 @@ export function print_key(k) {
 
 }
 
+export function hor_print_key(k,r,c) {
+    const state_hue = 165;
+    for (let i = 0 ; i < k.length ;  i++) {
+
+
+        for (let j = 0 ; j < k[0].length ;  j++) {
+            tg.set_rgb(255,0,0);
+            tg.print(`${k[i][j][0]} `);
+            tg.set_rgb(255,255,0);
+            tg.print(`${k[i][j][1]} `);
+            tg.set_rgb(state_hue ,state_hue ,state_hue );
+            tg.print(`${k[i][j][2]}\n`);
+        }
+        tg.print(`\n`);
+    }
+
+}
+
