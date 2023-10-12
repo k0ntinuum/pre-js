@@ -5,7 +5,7 @@ import * as finds from './finds.js';
 import * as mode from './mode.js';
 import * as key from './key.js';
 import * as tg from './tg.js';
-import * as encode from './encode.js';
+import * as encode from './code.js';
 import * as decode from './decode.js';
 import * as key_demo from './key_demo.js';
 

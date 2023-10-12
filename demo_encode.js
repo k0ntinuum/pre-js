@@ -108,9 +108,10 @@ export function encode_p_c_history(k,p) {
 
 export function print_history(p,c,h) {
     let col_space = [];
-    for (let i = 0 ; i < h.length; i++) col_space.push(Math.max(...h[i]));
+    for (let i = 0 ; i < h.length; i++) {
+        col_space.push(Math.max(h[i][0].length,h[i][1].length,h[i][2].length)+1);
+    }
     for (let i = 0 ; i < h.length; i++) tg.print(`${h[i][0].toString().padEnd(col_space[i])}`);
-    //for (let i = 0 ; i < h.length; i++) tg.print(`${h[i][0]}`);
     tg.print('\n');
     for (let i = 0 ; i < h.length; i++) tg.print(`${h[i][1].toString().padEnd(col_space[i])}`);
     tg.print('\n');
